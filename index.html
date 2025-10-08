@@ -194,3 +194,124 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aşil Deniz Arslan | Futbolcu & Yardımcı Antrenör</title>
+<meta name="description" content="Profesyonel futbolcu ve yardımcı antrenör Aşil Deniz Arslan’ın biyografisi, kariyeri, okul müsabakaları ve iletişim bilgileri.">
+<meta name="keywords" content="Aşil Deniz Arslan, futbolcu, antrenör, Edirne, Fevzipaşa, Üsküpspor, Kırklarelispor, Edirne Fatih Karagümrük, futbol okulu, sporcu biyografisi">
+
+<!-- Sosyal medya -->
+<meta property="og:title" content="Aşil Deniz Arslan | Futbolcu & Antrenör">
+<meta property="og:description" content="Aşil Deniz Arslan’ın futbol kariyeri, başarıları ve iletişim bilgileri.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://asildeniz0arslan10-coder.github.io/asildenizarslan/">
+<meta property="og:image" content="https://asildeniz0arslan10-coder.github.io/asildenizarslan/foto.jpg">
+
+<style>
+  body, html {margin:0; padding:0; font-family:'Poppins', sans-serif; scroll-behavior: smooth;}
+  body {background: linear-gradient(135deg, #003366, #0099cc); color:white;}
+  header {height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; background-attachment: fixed; background-size: cover; text-align:center;}
+  header h1 {font-size:3em; margin:0; animation: fadeInDown 1s;}
+  header p {font-size:1.3em; opacity:0.8; animation: fadeIn 2s;}
+  header img {width:180px; height:180px; border-radius:50%; border:3px solid #fff; object-fit:cover; margin-top:20px; animation: fadeInUp 2s;}
+
+  nav {position:fixed; top:0; width:100%; display:flex; justify-content:flex-end; padding:15px 30px; background:rgba(0,0,0,0.3); z-index:100;}
+  nav a {color:white; text-decoration:none; margin-left:20px; font-weight:bold;}
+  nav a:hover {text-decoration:underline;}
+
+  section {max-width:900px; margin:50px auto; background: rgba(255,255,255,0.1); padding:30px; border-radius:20px; box-shadow:0 4px 10px rgba(0,0,0,0.2); opacity:0; transform: translateY(50px); transition: all 1s ease;}
+  section.visible {opacity:1; transform: translateY(0);}
+  section h2 {border-bottom:2px solid #fff; display:inline-block; padding-bottom:5px; margin-bottom:15px;}
+
+  footer {padding:20px; text-align:center; opacity:0.8;}
+
+  @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
+  @keyframes fadeInDown {from{opacity:0; transform:translateY(-30px);} to{opacity:1; transform:translateY(0);}}
+  @keyframes fadeInUp {from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);}}
+
+  /* Mobil menü hamburger */
+  .hamburger {display:none; flex-direction:column; cursor:pointer;}
+  .bar {width:25px; height:3px; background:white; margin:4px 0; transition:0.4s;}
+  @media(max-width:768px){
+    nav a {display:none;}
+    .hamburger {display:flex;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="hamburger" onclick="toggleMenu(this)">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <a href="#hakkimda">Hakkımda</a>
+  <a href="#kariyer">Kariyer</a>
+  <a href="#okul">Okul Müsabakaları</a>
+  <a href="#iletisim">İletişim</a>
+</nav>
+
+<header>
+  <h1>Aşil Deniz Arslan</h1>
+  <p>Futbolcu & Yardımcı Antrenör</p>
+  <img src="foto.jpg" alt="Aşil Deniz Arslan">
+</header>
+
+<section id="hakkimda">
+  <h2>Hakkımda</h2>
+  <p>2006 doğumluyum. Futbola Fevzipaşa Spor’da başladım. Üsküpspor ve Kırklarelispor kulüplerinde forma giydim. Şu anda Edirne Fatih Karagümrük Futbol Okulu’nda <strong>Yardımcı Antrenör</strong> olarak görev yapıyorum.</p>
+</section>
+
+<section id="okul">
+  <h2>Okul Müsabakaları</h2>
+  <p>Okulum adına düzenlenen futbol müsabakalarına aktif olarak katıldım ve takımımın başarısında önemli rol oynadım.</p>
+</section>
+
+<section id="kariyer">
+  <h2>Kariyer</h2>
+  <ul style="list-style:none; padding:0;">
+    <li>⚽ Fevzipaşa Spor – Altyapı Başlangıcı</li>
+    <li>⚽ Üsküpspor – Gelişim Dönemi</li>
+    <li>⚽ Kırklarelispor – Performans Gelişimi</li>
+    <li>⚽ Edirne Fatih Karagümrük Futbol Okulu – Yardımcı Antrenör</li>
+  </ul>
+</section>
+
+<section id="iletisim">
+  <h2>İletişim</h2>
+  <p>📧 <a href="mailto:asildeniz0arslan10@gmail.com" style="color:white;">asildeniz0arslan10@gmail.com</a></p>
+  <p>📱 Instagram: <a href="https://instagram.com/asilldeniiz" target="_blank" style="color:white;">@asilldeniiz</a></p>
+</section>
+
+<footer>
+  © 2025 Aşil Deniz Arslan | Tüm hakları saklıdır.
+</footer>
+
+<script>
+  // Scroll animasyonu
+  const sections = document.querySelectorAll('section');
+  const options = {threshold:0.1};
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){ entry.target.classList.add('visible'); }
+    });
+  }, options);
+  sections.forEach(section => observer.observe(section));
+
+  // Hamburger menu
+  function toggleMenu(x){
+    const links = document.querySelectorAll('nav a');
+    links.forEach(a => {
+      if(a.style.display==='flex'){ a.style.display='none'; }
+      else{ a.style.display='flex'; a.style.flexDirection='column'; margin='10px 0'; }
+    });
+    x.classList.toggle("change");
+  }
+</script>
+
+</body>
+</html>
