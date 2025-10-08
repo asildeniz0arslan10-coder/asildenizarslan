@@ -20,11 +20,14 @@
 <style>
 body, html {margin:0; padding:0; font-family:'Poppins', sans-serif; scroll-behavior: smooth;}
 body {background: linear-gradient(135deg, #003366, #0099cc); color:white;}
-header {height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; background-attachment: fixed; background-size: cover; text-align:center;}
+
+/* Header - Parallax */
+header {height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; background-attachment: fixed; background-size: cover; text-align:center; transition: background-position 0.3s;}
 header h1 {font-size:3em; margin:0; animation: fadeInDown 1s;}
 header p {font-size:1.3em; opacity:0.8; animation: fadeIn 2s;}
 header img {width:180px; height:180px; border-radius:50%; border:3px solid #fff; object-fit:cover; margin-top:20px; animation: fadeInUp 2s;}
 
+/* Nav */
 nav {position:fixed; top:0; width:100%; display:flex; justify-content:flex-end; padding:15px 30px; background:rgba(0,0,0,0.3); z-index:100;}
 nav a {color:white; text-decoration:none; margin-left:20px; font-weight:bold;}
 nav a:hover {text-decoration:underline;}
@@ -35,18 +38,29 @@ nav a:hover {text-decoration:underline;}
   .hamburger {display:flex;}
 }
 
+/* Sections */
 section {max-width:900px; margin:50px auto; background: rgba(255,255,255,0.1); padding:30px; border-radius:20px; box-shadow:0 4px 10px rgba(0,0,0,0.2); opacity:0; transform: translateY(50px); transition: all 1s ease;}
 section.visible {opacity:1; transform: translateY(0);}
-section h2 {border-bottom:2px solid #fff; display:inline-block; padding-bottom:5px; margin-bottom:15px;}
+section h2 {border-bottom:2px solid #fff; display:inline-block; padding-bottom:5px; margin-bottom:15px; transition: transform 0.3s;}
+section h2:hover {transform: scale(1.05);}
 
+/* Buttons */
 a.button {
   display:inline-block; margin:5px; padding:10px 20px; border-radius:10px; font-weight:bold;
-  text-decoration:none; color:#003366; background:#fff; transition:0.3s;
+  text-decoration:none; color:#003366; background:#fff; transition: all 0.3s;
 }
-a.button:hover {background:#a3d5ff; color:#003366;}
+a.button:hover {
+  background:#a3d5ff; color:#003366; transform: scale(1.05); box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
 
+/* Icon Hover */
+a.button i {margin-right:8px; transition: transform 0.3s;}
+a.button:hover i {transform: rotate(20deg);}
+
+/* Footer */
 footer {padding:20px; text-align:center; opacity:0.8;}
 
+/* Animations */
 @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
 @keyframes fadeInDown {from{opacity:0; transform:translateY(-30px);} to{opacity:1; transform:translateY(0);}}
 @keyframes fadeInUp {from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);}}
@@ -106,6 +120,7 @@ footer {padding:20px; text-align:center; opacity:0.8;}
 </footer>
 
 <script>
+  // Scroll animasyonu
   const sections = document.querySelectorAll('section');
   const observer = new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
@@ -114,6 +129,7 @@ footer {padding:20px; text-align:center; opacity:0.8;}
   }, {threshold:0.1});
   sections.forEach(section => observer.observe(section));
 
+  // Hamburger menu
   function toggleMenu(x){
     const links = document.querySelectorAll('nav a');
     links.forEach(a => {
@@ -122,6 +138,11 @@ footer {padding:20px; text-align:center; opacity:0.8;}
     });
     x.classList.toggle("change");
   }
+
+  // Parallax effect for header
+  window.addEventListener('scroll', ()=>{
+    document.querySelector('header').style.backgroundPositionY = -(window.scrollY * 0.3) + 'px';
+  });
 </script>
 
 </body>
