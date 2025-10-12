@@ -85,6 +85,7 @@ footer {padding:20px; text-align:center; opacity:0.8;}
   width:100%;
   border-radius:10px;
   box-shadow:0 4px 8px rgba(0,0,0,0.2);
+  cursor:pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .gallery-img:hover {
@@ -98,10 +99,47 @@ footer {padding:20px; text-align:center; opacity:0.8;}
 }
 @media(max-width:768px){ .gallery-item{ width:45%; } }
 @media(max-width:480px){ .gallery-item{ width:90%; } }
+
+/* Lightbox overlay */
+#lightbox-overlay {
+  position: fixed;
+  top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+#lightbox-overlay img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+#lightbox-caption {
+  color:white;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  transform: translateY(-50%);
+}
+#lightbox-prev { left: 20px; }
+#lightbox-next { right: 20px; }
+
 </style>
 </head>
-
 <body>
+
 <nav>
   <div class="hamburger" onclick="toggleMenu(this)">
     <div class="bar"></div>
@@ -120,7 +158,7 @@ footer {padding:20px; text-align:center; opacity:0.8;}
   <img src="foto.jpg" alt="Aşil Deniz Arslan">
 </header>
 
-<!-- Galeri Section'ı -->
+<!-- Galeri Section -->
 <section id="gallery">
   <div class="gallery-item"><img src="img1.jpg.jpeg" alt="Görsel 1" class="gallery-img"><p class="caption">Görsel 1</p></div>
   <div class="gallery-item"><img src="img3.jpg.jpeg" alt="Görsel 3" class="gallery-img"><p class="caption">Görsel 3</p></div>
@@ -135,32 +173,18 @@ footer {padding:20px; text-align:center; opacity:0.8;}
 <!-- Hakkımda -->
 <section id="hakkimda">
   <h2>Hakkımda</h2>
-  <p>
-    Aşil Deniz Arslan, futbol tutkusu ile küçük yaşta tanıştı. Futbola Fevzipaşa Spor’un altyapısında başlamış, burada geçirdiği üç yıl boyunca takımına önemli katkılarda bulunarak şampiyonluklar yaşamıştır.
-  </p>
-  <p>
-    Ardından Üsküpspor’da iki yıl forma giyerek yeteneklerini geliştirmiş ve takımın başarılı dönemlerinde rol almıştır. Eğitim hayatına Kırklareli Spor Lisesi’nde devam eden Aşil, okul takımının aktif bir üyesi olarak çeşitli okul müsabakalarında mücadele etmiştir.
-  </p>
-  <p>
-    Kırklarelispor altyapısında iki yıl boyunca gösterdiği performans ile dikkat çekmiş ve takımın şampiyonluk süreçlerinde yer almıştır. Şu anda Edirne Spor Bilimleri Fakültesi’nde ikinci sınıf öğrencisi olan Aşil, futbol bilgisini genç sporculara aktarmak amacıyla Edirne Fatih Karagümrük Futbol Okulu’nda yardımcı antrenör olarak görev yapmaktadır.
-  </p>
-  <p>
-    Eğitim ve spor kariyerini bir arada yürüten Aşil, hem sahada hem de saha dışında disiplinli ve tutkulu yaklaşımıyla tanınmaktadır.
-  </p>
+  <p>Aşil Deniz Arslan, futbol tutkusu ile küçük yaşta tanıştı. Futbola Fevzipaşa Spor’un altyapısında başlamış, burada geçirdiği üç yıl boyunca takımına önemli katkılarda bulunarak şampiyonluklar yaşamıştır.</p>
+  <p>Ardından Üsküpspor’da iki yıl forma giyerek yeteneklerini geliştirmiş ve takımın başarılı dönemlerinde rol almıştır. Eğitim hayatına Kırklareli Spor Lisesi’nde devam eden Aşil, okul takımının aktif bir üyesi olarak çeşitli okul müsabakalarında mücadele etmiştir.</p>
+  <p>Kırklarelispor altyapısında iki yıl boyunca gösterdiği performans ile dikkat çekmiş ve takımın şampiyonluk süreçlerinde yer almıştır. Şu anda Edirne Spor Bilimleri Fakültesi’nde ikinci sınıf öğrencisi olan Aşil, futbol bilgisini genç sporculara aktarmak amacıyla Edirne Fatih Karagümrük Futbol Okulu’nda yardımcı antrenör olarak görev yapmaktadır.</p>
+  <p>Eğitim ve spor kariyerini bir arada yürüten Aşil, hem sahada hem de saha dışında disiplinli ve tutkulu yaklaşımıyla tanınmaktadır.</p>
 </section>
 
 <!-- Okul Müsabakaları -->
 <section id="okul">
   <h2>Okul Müsabakaları</h2>
-  <p>
-    Aşil Deniz Arslan, eğitim hayatı boyunca okulunun futbol takımında aktif olarak görev aldı. Kırklareli Spor Lisesi’nde okul takımının bir üyesi olarak çeşitli yerel ve bölgesel futbol müsabakalarına katıldı.
-  </p>
-  <p>
-    Sahada gösterdiği disiplinli ve kararlı performansıyla takımının önemli bir oyuncusu haline geldi. Katıldığı her müsabakada hem takım arkadaşlarına destek oldu hem de kendi yeteneklerini geliştirme fırsatı buldu.
-  </p>
-  <p>
-    Okul futbol takımıyla edindiği deneyimler, Aşil’in saha içi strateji ve liderlik becerilerini güçlendirdi ve ilerleyen yıllarda hem kulüp hem de antrenörlük kariyerinde ona büyük katkı sağladı.
-  </p>
+  <p>Aşil Deniz Arslan, eğitim hayatı boyunca okulunun futbol takımında aktif olarak görev aldı. Kırklareli Spor Lisesi’nde okul takımının bir üyesi olarak çeşitli yerel ve bölgesel futbol müsabakalarına katıldı.</p>
+  <p>Sahada gösterdiği disiplinli ve kararlı performansıyla takımının önemli bir oyuncusu haline geldi. Katıldığı her müsabakada hem takım arkadaşlarına destek oldu hem de kendi yeteneklerini geliştirme fırsatı buldu.</p>
+  <p>Okul futbol takımıyla edindiği deneyimler, Aşil’in saha içi strateji ve liderlik becerilerini güçlendirdi ve ilerleyen yıllarda hem kulüp hem de antrenörlük kariyerinde ona büyük katkı sağladı.</p>
 </section>
 
 <!-- Kariyer -->
@@ -188,6 +212,14 @@ footer {padding:20px; text-align:center; opacity:0.8;}
   © 2025 | Tüm hakları saklıdır.
 </footer>
 
+<!-- Lightbox -->
+<div id="lightbox-overlay">
+  <span class="lightbox-nav" id="lightbox-prev">&#10094;</span>
+  <img id="lightbox-img" src="" alt="">
+  <span class="lightbox-nav" id="lightbox-next">&#10095;</span>
+  <div id="lightbox-caption"></div>
+</div>
+
 <script>
 // Scroll animasyonu
 const sections = document.querySelectorAll('section');
@@ -212,8 +244,55 @@ function toggleMenu(x){
 window.addEventListener('scroll', ()=>{
   document.querySelector('header').style.backgroundPositionY = -(window.scrollY * 0.3) + 'px';
 });
+
+// Lightbox
+const galleryImages = document.querySelectorAll('.gallery-img');
+const lightboxOverlay = document.getElementById('lightbox-overlay');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCaption = document.getElementById('lightbox-caption');
+const prevBtn = document.getElementById('lightbox-prev');
+const nextBtn = document.getElementById('lightbox-next');
+
+let currentIndex = 0;
+
+galleryImages.forEach((img, index)=>{
+  img.addEventListener('click', ()=>{
+    currentIndex = index;
+    openLightbox();
+  });
+});
+
+function openLightbox(){
+  lightboxOverlay.style.display = 'flex';
+  updateLightbox();
+}
+
+function updateLightbox(){
+  lightboxImg.src = galleryImages[currentIndex].src;
+  lightboxCaption.textContent = galleryImages[currentIndex].alt;
+}
+
+lightboxOverlay.addEventListener('click', (e)=>{
+  if(e.target === lightboxOverlay) lightboxOverlay.style.display = 'none';
+});
+
+prevBtn.addEventListener('click', (e)=>{
+  e.stopPropagation();
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  updateLightbox();
+});
+nextBtn.addEventListener('click', (e)=>{
+  e.stopPropagation();
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  updateLightbox();
+});
+
+document.addEventListener('keydown', (e)=>{
+  if(e.key === 'Escape') lightboxOverlay.style.display = 'none';
+});
 </script>
 
 </body>
 </html>
+
 
