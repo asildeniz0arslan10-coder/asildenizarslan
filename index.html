@@ -65,8 +65,8 @@ footer {padding:20px; text-align:center; opacity:0.8;}
 @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
 @keyframes fadeInDown {from{opacity:0; transform:translateY(-30px);} to{opacity:1; transform:translateY(0);}}
 @keyframes fadeInUp {from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);}}
-</style>
-  /* Galeri CSS */
+
+/* Galeri CSS */
 #gallery {
   display:flex;
   flex-wrap:wrap;
@@ -98,10 +98,10 @@ footer {padding:20px; text-align:center; opacity:0.8;}
 }
 @media(max-width:768px){ .gallery-item{ width:45%; } }
 @media(max-width:480px){ .gallery-item{ width:90%; } }
+</style>
+</head>
 
-</head><meta name="google-site-verification" content="6R_eSf0TuOjqyqOJHwHjzGNC06WFZsOd5TRqV_v4ulk" />
 <body>
-
 <nav>
   <div class="hamburger" onclick="toggleMenu(this)">
     <div class="bar"></div>
@@ -119,42 +119,18 @@ footer {padding:20px; text-align:center; opacity:0.8;}
   <p>Futbolcu & Yardımcı Antrenör</p>
   <img src="foto.jpg" alt="Aşil Deniz Arslan">
 </header>
-  <!-- Galeri Section'ı -->
-<section id="gallery">
-  <div class="gallery-item">
-    <img src="img1.jpg.jpeg" alt="Görsel 1" class="gallery-img">
-    <p class="caption">Görsel 1</p>
-  </div>
-  <div class="gallery-item">
-    <img src="img3.jpg.jpeg" alt="Görsel 3" class="gallery-img">
-    <p class="caption">Görsel 3</p>
-  </div>
-  <div class="gallery-item">
-    <img src="img4.jpg.jpeg" alt="Görsel 4" class="gallery-img">
-    <p class="caption">Görsel 4</p>
-  </div>
-  <div class="gallery-item">
-    <img src="img5.jpg.jpeg" alt="Görsel 5" class="gallery-img">
-    <p class="caption">Görsel 5</p>
-  </div>
-  <div class="gallery-item">
-    <img src="img6.jpg.jpeg" alt="Görsel 6" class="gallery-img">
-    <p class="caption">Görsel 6</p>
-  </div>
-  <div class="gallery-item">
-    <img src="img7.jpg.jpeg" alt="Görsel 7" class="gallery-img">
-    <p class="caption">Görsel 7</p>
-  </div>
-  <div class="gallery-item">
-    <img src="img8.jpg.jpeg" alt="Görsel 8" class="gallery-img">
-    <p class="caption">Görsel 8</p>
-  </div>
-  <div class="gallery-item">
-    <img src="img9.jpg.jpeg" alt="Görsel 9" class="gallery-img">
-    <p class="caption">Görsel 9</p>
-  </div>
-</section>
 
+<!-- Galeri Section'ı -->
+<section id="gallery">
+  <div class="gallery-item"><img src="img1.jpg.jpeg" alt="Görsel 1" class="gallery-img"><p class="caption">Görsel 1</p></div>
+  <div class="gallery-item"><img src="img3.jpg.jpeg" alt="Görsel 3" class="gallery-img"><p class="caption">Görsel 3</p></div>
+  <div class="gallery-item"><img src="img4.jpg.jpeg" alt="Görsel 4" class="gallery-img"><p class="caption">Görsel 4</p></div>
+  <div class="gallery-item"><img src="img5.jpg.jpeg" alt="Görsel 5" class="gallery-img"><p class="caption">Görsel 5</p></div>
+  <div class="gallery-item"><img src="img6.jpg.jpeg" alt="Görsel 6" class="gallery-img"><p class="caption">Görsel 6</p></div>
+  <div class="gallery-item"><img src="img7.jpg.jpeg" alt="Görsel 7" class="gallery-img"><p class="caption">Görsel 7</p></div>
+  <div class="gallery-item"><img src="img8.jpg.jpeg" alt="Görsel 8" class="gallery-img"><p class="caption">Görsel 8</p></div>
+  <div class="gallery-item"><img src="img9.jpg.jpeg" alt="Görsel 9" class="gallery-img"><p class="caption">Görsel 9</p></div>
+</section>
 
 <!-- Hakkımda -->
 <section id="hakkimda">
@@ -213,32 +189,31 @@ footer {padding:20px; text-align:center; opacity:0.8;}
 </footer>
 
 <script>
-  // Scroll animasyonu
-  const sections = document.querySelectorAll('section');
-  const observer = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){ entry.target.classList.add('visible'); }
-    });
-  }, {threshold:0.1});
-  sections.forEach(section => observer.observe(section));
-
-  // Hamburger menu
-  function toggleMenu(x){
-    const links = document.querySelectorAll('nav a');
-    links.forEach(a => {
-      if(a.style.display==='flex'){ a.style.display='none'; }
-      else{ a.style.display='flex'; a.style.flexDirection='column'; margin='10px 0'; }
-    });
-    x.classList.toggle("change");
-  }
-
-  // Parallax effect for header
-  window.addEventListener('scroll', ()=>{
-    document.querySelector('header').style.backgroundPositionY = -(window.scrollY * 0.3) + 'px';
+// Scroll animasyonu
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){ entry.target.classList.add('visible'); }
   });
+},{threshold:0.1});
+sections.forEach(section => observer.observe(section));
+
+// Hamburger menu
+function toggleMenu(x){
+  const links = document.querySelectorAll('nav a');
+  links.forEach(a => {
+    if(a.style.display==='flex'){ a.style.display='none'; }
+    else{ a.style.display='flex'; a.style.flexDirection='column'; a.style.margin='10px 0'; }
+  });
+  x.classList.toggle("change");
+}
+
+// Parallax effect for header
+window.addEventListener('scroll', ()=>{
+  document.querySelector('header').style.backgroundPositionY = -(window.scrollY * 0.3) + 'px';
+});
 </script>
 
 </body>
 </html>
-<body>
 
