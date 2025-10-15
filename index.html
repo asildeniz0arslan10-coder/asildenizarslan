@@ -7,13 +7,66 @@
 <title>Aşil Deniz Arslan | Futbolcu & Yardımcı Antrenör</title>
 <meta name="description" content="Profesyonel futbolcu ve yardımcı antrenör Aşil Deniz Arslan’ın biyografisi, kariyeri, okul müsabakaları ve iletişim bilgileri.">
 <meta name="keywords" content="Aşil Deniz Arslan, futbolcu, antrenör, Edirne, Fevzipaşa, Üsküpspor, Kırklarelispor, Edirne Fatih Karagümrük, futbol okulu, sporcu biyografisi">
+<meta name="author" content="Aşil Deniz Arslan">
 
-<!-- Sosyal medya -->
+<!-- Open Graph (Sosyal Medya Paylaşımı) -->
 <meta property="og:title" content="Aşil Deniz Arslan | Futbolcu & Antrenör">
 <meta property="og:description" content="Aşil Deniz Arslan’ın futbol kariyeri, başarıları ve iletişim bilgileri.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://asildeniz0arslan10-coder.github.io/asildenizarslan/">
 <meta property="og:image" content="https://asildeniz0arslan10-coder.github.io/asildenizarslan/foto.jpg">
+
+<!-- Twitter Kartı -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aşil Deniz Arslan | Futbolcu & Antrenör">
+<meta name="twitter:description" content="Futbolcu ve yardımcı antrenör Aşil Deniz Arslan’ın resmi web sitesi.">
+<meta name="twitter:image" content="https://asildeniz0arslan10-coder.github.io/asildenizarslan/foto.jpg">
+
+<!-- Google Sporcu Kartı (Rich Snippet JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aşil Deniz Arslan",
+  "alternateName": "Asil Deniz Arslan",
+  "description": "Türk futbolcu ve yardımcı antrenör. Fevzipaşaspor, Üsküpspor ve Kırklarelispor altyapılarında forma giymiştir. Şu anda Edirne Spor Bilimleri Fakültesi'nde eğitim görmekte ve Edirne Fatih Karagümrük Futbol Okulu'nda yardımcı antrenör olarak görev yapmaktadır.",
+  "birthPlace": "Türkiye",
+  "nationality": "Türk",
+  "gender": "Male",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Edirne Spor Bilimleri Fakültesi"
+  },
+  "affiliation": [
+    {
+      "@type": "SportsTeam",
+      "name": "Fevzipaşaspor",
+      "sport": "Futbol"
+    },
+    {
+      "@type": "SportsTeam",
+      "name": "Üsküpspor",
+      "sport": "Futbol"
+    },
+    {
+      "@type": "SportsTeam",
+      "name": "Kırklarelispor",
+      "sport": "Futbol"
+    }
+  ],
+  "worksFor": {
+    "@type": "SportsTeam",
+    "name": "Edirne Fatih Karagümrük Futbol Okulu"
+  },
+  "jobTitle": "Yardımcı Antrenör",
+  "url": "https://asildeniz0arslan10-coder.github.io/asildenizarslan/",
+  "sameAs": [
+    "https://www.instagram.com/asilldeniiz"
+  ],
+  "email": "mailto:asildeniz0arslan10@gmail.com",
+  "image": "https://asildeniz0arslan10-coder.github.io/asildenizarslan/foto.jpg"
+}
+</script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -67,72 +120,19 @@ footer {padding:20px; text-align:center; opacity:0.8;}
 @keyframes fadeInUp {from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);}}
 
 /* Galeri CSS */
-#gallery {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
-  padding:20px;
-  background-color: rgba(255,255,255,0.1);
-}
-.gallery-item {
-  width:30%;
-  max-width:250px;
-  text-align:center;
-  margin-bottom:20px;
-}
-.gallery-img {
-  width:100%;
-  border-radius:10px;
-  box-shadow:0 4px 8px rgba(0,0,0,0.2);
-  cursor:pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.gallery-img:hover {
-  transform:scale(1.05);
-  box-shadow:0 8px 16px rgba(0,0,0,0.3);
-}
-.caption {
-  margin-top:8px;
-  font-size:14px;
-  color:white;
-}
+#gallery {display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:20px; background-color: rgba(255,255,255,0.1);}
+.gallery-item {width:30%; max-width:250px; text-align:center; margin-bottom:20px;}
+.gallery-img {width:100%; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.2); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;}
+.gallery-img:hover {transform:scale(1.05); box-shadow:0 8px 16px rgba(0,0,0,0.3);}
+.caption {margin-top:8px; font-size:14px; color:white;}
 @media(max-width:768px){ .gallery-item{ width:45%; } }
 @media(max-width:480px){ .gallery-item{ width:90%; } }
 
 /* Lightbox overlay */
-#lightbox-overlay {
-  position: fixed;
-  top:0; left:0; width:100%; height:100%;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  flex-direction: column;
-}
-#lightbox-overlay img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-}
-#lightbox-caption {
-  color:white;
-  margin-top: 10px;
-  text-align: center;
-  font-size: 18px;
-}
-.lightbox-nav {
-  position: absolute;
-  top: 50%;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
-  user-select: none;
-  padding: 10px;
-  transform: translateY(-50%);
-}
+#lightbox-overlay {position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); display: none; justify-content: center; align-items: center; z-index: 9999; flex-direction: column;}
+#lightbox-overlay img {max-width: 90%; max-height: 80%; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);}
+#lightbox-caption {color:white; margin-top: 10px; text-align: center; font-size: 18px;}
+.lightbox-nav {position: absolute; top: 50%; font-size: 40px; color: white; cursor: pointer; user-select: none; padding: 10px; transform: translateY(-50%);}
 #lightbox-prev { left: 20px; }
 #lightbox-next { right: 20px; }
 
@@ -175,7 +175,7 @@ footer {padding:20px; text-align:center; opacity:0.8;}
   <h2>Hakkımda</h2>
   <p>Aşil Deniz Arslan, futbol tutkusu ile küçük yaşta tanıştı. Futbola Fevzipaşa Spor’un altyapısında başlamış, burada geçirdiği üç yıl boyunca takımına önemli katkılarda bulunarak şampiyonluklar yaşamıştır.</p>
   <p>Ardından Üsküpspor’da iki yıl forma giyerek yeteneklerini geliştirmiş ve takımın başarılı dönemlerinde rol almıştır. Eğitim hayatına Kırklareli Spor Lisesi’nde devam eden Aşil, okul takımının aktif bir üyesi olarak çeşitli okul müsabakalarında mücadele etmiştir.</p>
-  <p>Kırklarelispor altyapısında iki yıl boyunca gösterdiği performans ile dikkat çekmiş ve takımın şampiyonluk süreçlerinde yer almıştır. Şu anda Edirne Spor Bilimleri Fakültesi’nde ikinci sınıf öğrencisi olan Aşil, futbol bilgisini genç sporculara aktarmak amacıyla Edirne Fatih Karagümrük Futbol Okulu’nda yardımcı antrenör olarak görev yapmaktadır.</p>
+  <p>Kırklarelispor altyapısında iki yıl boyunca gösterdiği performans ile dikkat çekmiş ve takımın şampiyonluk süreçlerinde yer almıştır. Şu anda Edirne Spor Bilimleri Fakültesi’nde ikinci sınıf öğrencisi olan Aşil, futbol bilgisini genç sporculara aktarmak amacıyla Edirne Fatih Karagümrük Futbol Okulu'nda yardımcı antrenör olarak görev yapmaktadır.</p>
   <p>Eğitim ve spor kariyerini bir arada yürüten Aşil, hem sahada hem de saha dışında disiplinli ve tutkulu yaklaşımıyla tanınmaktadır.</p>
 </section>
 
@@ -191,9 +191,9 @@ footer {padding:20px; text-align:center; opacity:0.8;}
 <section id="kariyer">
   <h2>Kariyer</h2>
   <ul style="list-style:none; padding:0;">
-    <li>⚽ Fevzipaşa Spor – Altyapı Başlangıcı</li>
-    <li>⚽ Üsküpspor – Gelişim Dönemi</li>
-    <li>⚽ Kırklarelispor – Performans Gelişimi</li>
+    <li>⚽ Fevzipaşa Spor – Altyapı Başlangıcı (3 yıl şampiyonluk)</li>
+    <li>⚽ Üsküpspor – Gelişim Dönemi (2 yıl şampiyonluk)</li>
+    <li>⚽ Kırklarelispor – Performans Gelişimi (2 yıl şampiyonluk)</li>
     <li>⚽ Edirne Fatih Karagümrük Futbol Okulu – Yardımcı Antrenör</li>
   </ul>
 </section>
