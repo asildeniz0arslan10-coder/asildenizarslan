@@ -22,27 +22,26 @@
 <meta name="twitter:description" content="Futbolcu ve yardımcı antrenör Aşil Deniz Arslan’ın resmi web sitesi.">
 <meta name="twitter:image" content="https://asildeniz0arslan10-coder.github.io/asildenizarslan/foto.jpg">
 
-<!-- Google Sporcu Kartı (Rich Snippet JSON-LD) -->
+<!-- Google Sporcu Kartı (Geçerli JSON-LD) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Aşil Deniz Arslan",
-  "alternateName": "Asil Deniz Arslan",
   "description": "Türk futbolcu ve yardımcı antrenör. Fevzipaşaspor, Üsküpspor ve Kırklarelispor altyapılarında forma giymiştir. Şu anda Edirne Spor Bilimleri Fakültesi'nde eğitim görmekte ve Edirne Fatih Karagümrük Futbol Okulu'nda yardımcı antrenör olarak görev yapmaktadır.",
-  "birthPlace": "Türkiye",
-  "nationality": "Türk",
-  "gender": "Male",
   "alumniOf": {
     "@type": "CollegeOrUniversity",
     "name": "Edirne Spor Bilimleri Fakültesi"
   },
   "affiliation": [
-    {"@type": "SportsTeam","name": "Fevzipaşaspor","sport": "Futbol"},
-    {"@type": "SportsTeam","name": "Üsküpspor","sport": "Futbol"},
-    {"@type": "SportsTeam","name": "Kırklarelispor","sport": "Futbol"}
+    {"@type": "SportsTeam", "name": "Fevzipaşaspor"},
+    {"@type": "SportsTeam", "name": "Üsküpspor"},
+    {"@type": "SportsTeam", "name": "Kırklarelispor"}
   ],
-  "worksFor": {"@type": "SportsTeam","name": "Edirne Fatih Karagümrük Futbol Okulu"},
+  "worksFor": {
+    "@type": "SportsTeam",
+    "name": "Edirne Fatih Karagümrük Futbol Okulu"
+  },
   "jobTitle": "Yardımcı Antrenör",
   "url": "https://asildeniz0arslan10-coder.github.io/asildenizarslan/",
   "sameAs": [
@@ -50,7 +49,6 @@
     "https://www.facebook.com/asil.deniz.arslan/",
     "https://tff.org/Default.aspx?pageId=30&kisiId=1869738"
   ],
-  "email": "mailto:asildeniz0arslan10@gmail.com",
   "image": "https://asildeniz0arslan10-coder.github.io/asildenizarslan/foto.jpg"
 }
 </script>
@@ -59,7 +57,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-/* Stil ve Animasyonlar aynen korunacak */
+/* --- Aynı CSS Kodları --- */
 body, html {margin:0; padding:0; font-family:'Poppins', sans-serif; scroll-behavior: smooth;}
 body {background: linear-gradient(135deg, #003366, #0099cc); color:white;}
 header {height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; background-attachment: fixed; background-size: cover; text-align:center; transition: background-position 0.3s;}
@@ -71,7 +69,7 @@ nav a {color:white; text-decoration:none; margin-left:20px; font-weight:bold;}
 nav a:hover {text-decoration:underline;}
 .hamburger {display:none; flex-direction:column; cursor:pointer;}
 .bar {width:25px; height:3px; background:white; margin:4px 0; transition:0.4s;}
-@media(max-width:768px){nav a {display:none;} .hamburger {display:flex;}}
+@media(max-width:768px){nav a{display:none;}.hamburger{display:flex;}}
 section {max-width:900px; margin:50px auto; background: rgba(255,255,255,0.1); padding:30px; border-radius:20px; box-shadow:0 4px 10px rgba(0,0,0,0.2); opacity:0; transform: translateY(50px); transition: all 1s ease;}
 section.visible {opacity:1; transform: translateY(0);}
 section h2 {border-bottom:2px solid #fff; display:inline-block; padding-bottom:5px; margin-bottom:15px; transition: transform 0.3s;}
@@ -89,8 +87,8 @@ footer {padding:20px; text-align:center; opacity:0.8;}
 .gallery-img {width:100%; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.2); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;}
 .gallery-img:hover {transform:scale(1.05); box-shadow:0 8px 16px rgba(0,0,0,0.3);}
 .caption {margin-top:8px; font-size:14px; color:white;}
-@media(max-width:768px){ .gallery-item{ width:45%; } }
-@media(max-width:480px){ .gallery-item{ width:90%; } }
+@media(max-width:768px){.gallery-item{ width:45%; }}
+@media(max-width:480px){.gallery-item{ width:90%; }}
 #lightbox-overlay {position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); display: none; justify-content: center; align-items: center; z-index: 9999; flex-direction: column;}
 #lightbox-overlay img {max-width: 90%; max-height: 80%; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);}
 #lightbox-caption {color:white; margin-top: 10px; text-align: center; font-size: 18px;}
@@ -119,6 +117,7 @@ footer {padding:20px; text-align:center; opacity:0.8;}
   <img src="foto.jpg" alt="Aşil Deniz Arslan">
 </header>
 
+<!-- Galeri Section -->
 <section id="gallery">
   <div class="gallery-item"><img src="img1.jpg.jpeg" alt="Görsel 1" class="gallery-img"><p class="caption">Görsel 1</p></div>
   <div class="gallery-item"><img src="img3.jpg.jpeg" alt="Görsel 3" class="gallery-img"><p class="caption">Görsel 3</p></div>
@@ -130,6 +129,7 @@ footer {padding:20px; text-align:center; opacity:0.8;}
   <div class="gallery-item"><img src="img9.jpg.jpeg" alt="Görsel 9" class="gallery-img"><p class="caption">Görsel 9</p></div>
 </section>
 
+<!-- Hakkımda -->
 <section id="hakkimda">
   <h2>Hakkımda</h2>
   <p>Aşil Deniz Arslan, futbol tutkusu ile küçük yaşta tanıştı. Futbola Fevzipaşa Spor’un altyapısında başlamış, burada geçirdiği üç yıl boyunca takımına önemli katkılarda bulunarak şampiyonluklar yaşamıştır.</p>
@@ -138,6 +138,7 @@ footer {padding:20px; text-align:center; opacity:0.8;}
   <p>Eğitim ve spor kariyerini bir arada yürüten Aşil, hem sahada hem de saha dışında disiplinli ve tutkulu yaklaşımıyla tanınmaktadır.</p>
 </section>
 
+<!-- Okul Müsabakaları -->
 <section id="okul">
   <h2>Okul Müsabakaları</h2>
   <p>Aşil Deniz Arslan, eğitim hayatı boyunca okulunun futbol takımında aktif olarak görev aldı. Kırklareli Spor Lisesi’nde okul takımının bir üyesi olarak çeşitli yerel ve bölgesel futbol müsabakalarına katıldı.</p>
@@ -145,6 +146,7 @@ footer {padding:20px; text-align:center; opacity:0.8;}
   <p>Okul futbol takımıyla edindiği deneyimler, Aşil’in saha içi strateji ve liderlik becerilerini güçlendirdi ve ilerleyen yıllarda hem kulüp hem de antrenörlük kariyerinde ona büyük katkı sağladı.</p>
 </section>
 
+<!-- Kariyer -->
 <section id="kariyer">
   <h2>Kariyer</h2>
   <ul style="list-style:none; padding:0;">
@@ -155,12 +157,13 @@ footer {padding:20px; text-align:center; opacity:0.8;}
   </ul>
 </section>
 
+<!-- İletişim -->
 <section id="iletisim">
   <h2>İletişim</h2>
   <p>
     <a href="mailto:asildeniz0arslan10@gmail.com" class="button"><i class="fas fa-envelope"></i> E-posta</a>
     <a href="https://instagram.com/asilldeniiz" target="_blank" class="button"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="https://www.facebook.com/asil.deniz.arslan/" target="_blank" class="button"><i class="fab fa-facebook"></i> Facebook</a>
+    <a href="https://facebook.com/asil.deniz.arslan/" target="_blank" class="button"><i class="fab fa-facebook"></i> Facebook</a>
     <a href="https://tff.org/Default.aspx?pageId=30&kisiId=1869738" target="_blank" class="button"><i class="fas fa-futbol"></i> TFF Profili</a>
   </p>
 </section>
@@ -169,6 +172,7 @@ footer {padding:20px; text-align:center; opacity:0.8;}
   © 2025 | Tüm hakları saklıdır.
 </footer>
 
+<!-- Lightbox -->
 <div id="lightbox-overlay">
   <span class="lightbox-nav" id="lightbox-prev">&#10094;</span>
   <img id="lightbox-img" src="" alt="">
@@ -208,24 +212,45 @@ const lightboxImg = document.getElementById('lightbox-img');
 const lightboxCaption = document.getElementById('lightbox-caption');
 const prevBtn = document.getElementById('lightbox-prev');
 const nextBtn = document.getElementById('lightbox-next');
+
 let currentIndex = 0;
+
 galleryImages.forEach((img, index)=>{
   img.addEventListener('click', ()=>{
     currentIndex = index;
     openLightbox();
   });
 });
-function openLightbox(){ lightboxOverlay.style.display = 'flex'; updateLightbox(); }
-function updateLightbox(){ lightboxImg.src = galleryImages[currentIndex].src; lightboxCaption.textContent = galleryImages[currentIndex].alt; }
-lightboxOverlay.addEventListener('click', (e)=>{ if(e.target === lightboxOverlay) lightboxOverlay.style.display = 'none'; });
-prevBtn.addEventListener('click', (e)=>{ e.stopPropagation(); currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length; updateLightbox(); });
-nextBtn.addEventListener('click', (e)=>{ e.stopPropagation(); currentIndex = (currentIndex + 1) % galleryImages.length; updateLightbox(); });
-document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') lightboxOverlay.style.display = 'none'; });
+
+function openLightbox(){
+  lightboxOverlay.style.display = 'flex';
+  updateLightbox();
+}
+
+function updateLightbox(){
+  lightboxImg.src = galleryImages[currentIndex].src;
+  lightboxCaption.textContent = galleryImages[currentIndex].alt;
+}
+
+lightboxOverlay.addEventListener('click', (e)=>{
+  if(e.target === lightboxOverlay) lightboxOverlay.style.display = 'none';
+});
+
+prevBtn.addEventListener('click', (e)=>{
+  e.stopPropagation();
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  updateLightbox();
+});
+nextBtn.addEventListener('click', (e)=>{
+  e.stopPropagation();
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  updateLightbox();
+});
+
+document.addEventListener('keydown', (e)=>{
+  if(e.key === 'Escape') lightboxOverlay.style.display = 'none';
+});
 </script>
 
 </body>
 </html>
-
-
-
-
