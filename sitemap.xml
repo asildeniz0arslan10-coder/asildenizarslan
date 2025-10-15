@@ -1,71 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Anasayfa -->
+  <!-- Ana Sayfa -->
   <url>
     <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Hakkımda -->
   <url>
     <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/#hakkimda</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Kariyer -->
   <url>
     <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/#kariyer</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Okul Müsabakaları -->
   <url>
     <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/#okul</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- İletişim -->
   <url>
     <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/#iletisim</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Galeri Görselleri -->
+  <!-- Galeri -->
   <url>
-    <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/foto.jpg</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/img1.jpg.jpeg</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/img3.jpg.jpeg</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/img4.jpg.jpeg</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/img5.jpg.jpeg</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/img6.jpg.jpeg</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/img7.jpg.jpeg</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/img8.jpg.jpeg</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/img9.jpg.jpeg</loc>
+    <loc>https://asildeniz0arslan10-coder.github.io/asildenizarslan/#gallery</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
